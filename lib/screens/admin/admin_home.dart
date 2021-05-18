@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:neet_guidance/screens/admin/add_centers.dart';
+import 'package:neet_guidance/screens/welcome.dart';
 //import 'package:placement_prep/screens/welcome/admin_technology.dart';
 //import '../add_event.dart';
 //import '../welcome.dart';
@@ -34,7 +36,7 @@ class AdminHome extends StatelessWidget {
                         ),
 
                         onPressed: () => {
-                        //  Navigator.push(context, MaterialPageRoute(builder: (context) => AddEventPage()),)
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => AddCenters()),)
                         },
                         splashColor: Colors.redAccent,
                       )),
@@ -96,7 +98,7 @@ class AdminHome extends StatelessWidget {
                           ],
                         ),
                         onPressed: () => {
-                          //Navigator.push(context, MaterialPageRoute(builder: (context) => Welcome()),)
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => Welcome()),)
                         },
                         splashColor: Colors.redAccent,
                       )),
