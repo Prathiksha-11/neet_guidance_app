@@ -3,7 +3,10 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:neet_guidance/screens/admin/admin_home.dart';
+import 'package:neet_guidance/screens/admin/admin_login.dart';
 import 'package:neet_guidance/screens/sign_up.dart';
+import 'package:neet_guidance/screens/welcome.dart';
 import 'models/authentication.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -32,10 +35,13 @@ class MyApp extends StatelessWidget {
           accentColor: Colors.greenAccent,
 
         ),
-        home: SignUpView(),
+        home: Welcome(),
         routes: {
           'signupview' : (BuildContext context) => SignUpView(authFormType:AuthFormType.signUp),
           'HomeScreen': (ctx) => HomeController(),
+          'AdminHome': (ctx) => AdminHome(),
+          'WelcomeScreen' : (ctx) => Welcome(),
+          'AdminLogin' : (ctx) => AdminLogin(),
         },
       ),
     );
@@ -51,7 +57,7 @@ class HomeController extends StatelessWidget{
       builder: (context, AsyncSnapshot<String> snapshot) {
         if (snapshot.connectionState == ConnectionState.active) {
           final bool signedIn = snapshot.hasData;
-          return signedIn ? HomeScreen(): SignUpView(authFormType:AuthFormType.signUp);
+          return signedIn ? HomeScreen(): Welcome();
         }
         return CircularProgressIndicator();
       },
