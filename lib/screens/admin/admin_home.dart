@@ -10,7 +10,9 @@ class AdminHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("DashBoard"),
+        title: Text("Admin DashBoard"),
+        elevation: 100,
+        toolbarHeight: 70,
       ),
       body: Center(
           child: Column(
@@ -34,28 +36,8 @@ class AdminHome extends StatelessWidget {
                             new Text("Posts"),
                           ],
                         ),
-
                         onPressed: () => {
                           Navigator.push(context, MaterialPageRoute(builder: (context) => AddCenters()),)
-                        },
-                        splashColor: Colors.redAccent,
-                      )),
-                  Padding(
-                      padding: EdgeInsets.all(10.0),
-                      child: new MaterialButton(
-                        height: 170.0,
-                        minWidth: 170.0,
-                        color: Color(0xff453658),
-                        textColor: Colors.white,
-                        child: Column(
-                          children: [
-                            Icon(Icons.insert_chart_outlined,color: Colors.black,size: 60,),
-                            SizedBox(height: 20,),
-                            new Text("Technologies"),
-                          ],
-                        ),
-                        onPressed: () => {
-                         // Navigator.push(context, MaterialPageRoute(builder: (context) => Technologyform()),)
                         },
                         splashColor: Colors.redAccent,
                       )),
@@ -64,25 +46,6 @@ class AdminHome extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Padding(
-                      padding: EdgeInsets.all(10.0),
-                      child: new MaterialButton(
-                        height: 170.0,
-                        minWidth: 170.0,
-                        color: Color(0xff453658),
-                        textColor: Colors.white,
-                        child: Column(
-                          children: [
-                            Icon(Icons.rate_review_outlined,color: Colors.black,size: 60,),
-                            SizedBox(height: 20,),
-                            new Text("Alumni Reviews"),
-                          ],
-                        ),
-                        onPressed: () => {
-                        //  Navigator.push(context, MaterialPageRoute(builder: (context) => Alumniform()),)
-                        },
-                        splashColor: Colors.redAccent,
-                      )),
                   Padding(
                       padding: EdgeInsets.all(10.0),
                       child: new MaterialButton(

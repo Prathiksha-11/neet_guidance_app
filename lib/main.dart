@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:neet_guidance/screens/admin/admin_home.dart';
 import 'package:neet_guidance/screens/admin/admin_login.dart';
 import 'package:neet_guidance/screens/sign_up.dart';
+import 'package:neet_guidance/screens/student/neetinfo.dart';
 import 'package:neet_guidance/screens/welcome.dart';
 import 'package:neet_guidance/splash.dart';
 import 'chatbot.dart';
@@ -46,6 +47,7 @@ class MyApp extends StatelessWidget {
           'AdminLogin' : (ctx) => AdminLogin(),
           'splash'     : (ctx) => splashscreen(),
           'Chatbot': (context) => ChatBot(),
+          'NeetInfo'     : (ctx) => NeetInfo(),
         },
       ),
     );

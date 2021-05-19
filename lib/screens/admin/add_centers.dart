@@ -46,7 +46,7 @@ class AddCentersState extends State<AddCenters> {
               decoration:
               InputDecoration(
                 hintText: 'Enter name of the coaching center',
-                prefixIcon:Icon(Icons.home_work_outlined,size: 30,),
+                prefixIcon:Icon(Icons.corporate_fare,size: 30,),
                 fillColor: Colors.white,
                 filled: true,
                 contentPadding: EdgeInsets.all(15),
@@ -58,7 +58,7 @@ class AddCentersState extends State<AddCenters> {
               decoration:
               InputDecoration(
                 hintText: 'Enter approx fees',
-                prefixIcon:Icon( Icons.corporate_fare,size: 30,),
+                prefixIcon:Icon( Icons.attach_money,size: 30,),
                 fillColor: Colors.white,
                 filled: true,
                 contentPadding: EdgeInsets.all(15),
@@ -70,7 +70,7 @@ class AddCentersState extends State<AddCenters> {
               decoration:
               InputDecoration(
                 hintText: 'Enter the deadline to register',
-                prefixIcon:Icon(Icons.fact_check_sharp,size: 30,),
+                prefixIcon:Icon(Icons.calendar_today_outlined,size: 30,),
                 fillColor: Colors.white,
                 filled: true,
                 contentPadding: EdgeInsets.all(15),
@@ -82,7 +82,7 @@ class AddCentersState extends State<AddCenters> {
               decoration:
               InputDecoration(
                 hintText: 'Enter phone number to contact',
-                prefixIcon:Icon(Icons.fact_check_sharp,size: 30,),
+                prefixIcon:Icon(Icons.call,size: 30,),
                 fillColor: Colors.white,
                 filled: true,
                 contentPadding: EdgeInsets.all(15),
