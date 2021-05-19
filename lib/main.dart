@@ -7,6 +7,8 @@ import 'package:neet_guidance/screens/admin/admin_home.dart';
 import 'package:neet_guidance/screens/admin/admin_login.dart';
 import 'package:neet_guidance/screens/sign_up.dart';
 import 'package:neet_guidance/screens/welcome.dart';
+import 'package:neet_guidance/splash.dart';
+import 'chatbot.dart';
 import 'models/authentication.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -42,6 +44,8 @@ class MyApp extends StatelessWidget {
           'AdminHome': (ctx) => AdminHome(),
           'WelcomeScreen' : (ctx) => Welcome(),
           'AdminLogin' : (ctx) => AdminLogin(),
+          'splash'     : (ctx) => splashscreen(),
+          'Chatbot': (context) => ChatBot(),
         },
       ),
     );

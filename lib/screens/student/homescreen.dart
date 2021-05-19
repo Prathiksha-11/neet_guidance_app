@@ -126,18 +126,7 @@ class _HomeState extends State<HomeScreen> {
                   //Navigator.pushNamed(context,'Displayuserdetails');
                 }
             ),
-            ListTile(
-                leading: Icon(Icons.playlist_add_check_rounded),
-                title: Text('IOT',style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 20.0,
-                ),
-                ),
 
-                onTap: () {
-                  Navigator.pushNamed(context, 'topics3');
-                }
-            ),
             ListTile(
                 leading: Icon(Icons.psychology_outlined),
                 title: Text('Quiz',style: TextStyle(
@@ -147,10 +136,10 @@ class _HomeState extends State<HomeScreen> {
                 ),
 
                 onTap: () {
-                //  Navigator.pushNamed(context, 'splash');
+                  Navigator.pushNamed(context, 'splash');
                 }
             ),
-            ListTile(
+            /*ListTile(
                 leading: Icon(Icons.insert_chart_outlined),
                 title: Text('Latest Technologies',style: TextStyle(
                   color: Colors.black,
@@ -161,7 +150,7 @@ class _HomeState extends State<HomeScreen> {
                 onTap: () {
                 //  Navigator.pushNamed(context, 'technology');
                 }
-            ),
+            ), */
             ListTile(
                 leading: Icon(Icons.question_answer_sharp),
                 title: Text('Chatbot',style: TextStyle(
@@ -171,7 +160,7 @@ class _HomeState extends State<HomeScreen> {
                 ),
 
                 onTap: () {
-                 // Navigator.pushNamed(context, 'Chatbot');
+                  Navigator.pushNamed(context, 'Chatbot');
                 }
             ),
 
