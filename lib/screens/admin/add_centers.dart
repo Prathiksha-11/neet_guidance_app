@@ -90,7 +90,7 @@ class AddCentersState extends State<AddCenters> {
                 contentPadding: EdgeInsets.all(15),
               ),
             ),
-            SizedBox(height: 50,),
+            SizedBox(height: 25,),
             TextFormField(
               controller: _linkController,
               decoration:
