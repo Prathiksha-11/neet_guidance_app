@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
@@ -89,6 +90,18 @@ class _HomeState extends State<HomeScreen> {
                           fontSize: 20.0, fontWeight: FontWeight.w700),
                     ),
                     children: <Widget>[
+                      InkWell(
+                          child: Text('Register :' + data['Link'],
+                            style: TextStyle(
+                                fontSize: 17.0, fontWeight: FontWeight.w700),
+                          ),
+
+                          onTap: () async {
+                            if (await canLaunch(data['Link'])) {
+                              await launch(data['Link']);
+                            }
+                          }
+                      ),
 
                       ListTile(
                         title: Text('Register Deadline : ' +

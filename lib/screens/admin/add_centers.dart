@@ -3,7 +3,7 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 class AddCenters extends StatefulWidget {
-  const AddCenters({Key key, this.name, this.fees, this.time, this.number}) : super(key: key);
+  const AddCenters({Key key, this.name, this.fees, this.time, this.number, this.link}) : super(key: key);
 
   @override
   AddCentersState createState() => AddCentersState();
@@ -11,10 +11,11 @@ class AddCenters extends StatefulWidget {
   final fees;
   final time;
   final number;
+  final link;
 }
 
 class AddCentersState extends State<AddCenters> {
-  TextEditingController _nameController,_feesController,_timeController,_numberController;
+  TextEditingController _nameController,_feesController,_timeController,_numberController, _linkController;
   DatabaseReference _ref;
 
   @override
@@ -24,6 +25,7 @@ class AddCentersState extends State<AddCenters> {
     _feesController=TextEditingController();
     _timeController=TextEditingController();
     _numberController=TextEditingController();
+   _linkController=TextEditingController();
 
 
   }
@@ -89,6 +91,18 @@ class AddCentersState extends State<AddCenters> {
               ),
             ),
             SizedBox(height: 50,),
+            TextFormField(
+              controller: _linkController,
+              decoration:
+              InputDecoration(
+                hintText: 'Enter link to register',
+                prefixIcon:Icon(Icons.link,size: 30,),
+                fillColor: Colors.white,
+                filled: true,
+                contentPadding: EdgeInsets.all(15),
+              ),
+            ),
+            SizedBox(height: 50,),
             Container(
               width: double.infinity,
               padding: EdgeInsets.symmetric(horizontal: 10),
@@ -119,18 +133,20 @@ class AddCentersState extends State<AddCenters> {
     String fees = _feesController.text;
     String time = _timeController.text;
     String number = _numberController.text;
+    String link = _linkController.text;
 
     Map<String,String> data = {
       'name':name,
       'fees' :fees,
       'time' : time,
       'number' : number,
+      'link'   : link,
     };
 
     FirebaseFirestore.instance.runTransaction((Transaction transaction) async {
       CollectionReference reference = FirebaseFirestore.instance.collection('CoachingCenter');
 
-      await reference.add({"Name": "$name","Fees": "$fees","Time": "$time","Number": "$number"});
+      await reference.add({"Name": "$name","Fees": "$fees","Time": "$time","Number": "$number", "Link": "$link"});
     });
   }
 }
